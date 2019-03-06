@@ -445,6 +445,10 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     shellany (0.0.1)
+    shiba (0.5.0)
+      activesupport
+      mysql2
+      pg
     simple_oauth (0.3.1)
     simplecov (0.15.1)
       docile (~> 1.1.0)
@@ -598,6 +602,7 @@ DEPENDENCIES
   rubyntlm!
   sassc-rails
   selenium-webdriver
+  shiba
   simplecov
   simplecov-rcov
   slack-notifier

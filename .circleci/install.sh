@@ -39,3 +39,4 @@ rake db:reset
 rake test:units
 ruby -I test/ test/integration/object_manager_test.rb
 ruby -I test/ test/integration/package_test.rb
+bundle exec shiba review --submit --verbose
