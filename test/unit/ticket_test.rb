@@ -557,4 +557,7 @@ class TicketTest < ActiveSupport::TestCase
     ticket1.destroy
   end
 
+  test 'test shiba' do
+    Ticket.by_state
+  end
 end
