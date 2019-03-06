@@ -9,7 +9,7 @@ jobs:
           name: lint-scripts
           command: .circleci/lint-scripts.sh
 
-  install-mysql:
+  install-mysql-minimal:
     docker:
       - image: circleci/ruby:2.4.4
       - image: circleci/mysql:5.7-ram
@@ -23,45 +23,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install-mysql
-          command: .circleci/install.sh
-
-  install-postgresql:
-    docker:
-      - image: circleci/ruby:2.4.4
-      - image: circleci/postgres:11-ram
-        environment:
-          POSTGRES_DB: zammad_test
-          POSTGRES_USER: zammad_test
-          POSTGRES_PASSWORD: zammad_test
-    environment:
-      RAILS_ENV: test
-    steps:
-      - checkout
-      - run:
-          name: install-postgresql
-          command: .circleci/install.sh
-
-  docker-image-build:
-    machine: true
-    steps:
-      - checkout
-      - run:
-          name: docker-image-build
-          command: .circleci/docker-image-build.sh
+          name: install-mysql-minimal
+          command: .circleci/install-minimal.sh
 
 workflows:
   version: 2
   install_unittest_dockerbuild:
     jobs:
       - lint-scripts
-      - install-mysql:
+      - install-mysql-minimal:
           requires:
             - lint-scripts
-      - install-postgresql:
-          requires:
-            - lint-scripts
-      - docker-image-build:
-          requires:
-            - install-mysql
-            - install-postgresql

@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/burrito-brothers/shiba.git
+  revision: a31ca8d9f66ceac33ec7d70bce6734efeb9a2e61
+  ref: master
+  specs:
+    shiba (0.5.0)
+      activesupport
+      mysql2
+      pg
+
+GIT
   remote: https://github.com/sferik/twitter.git
   revision: 844818cad07ce490ccb9d8542ebb6b4fc7a61cb4
   specs:
@@ -445,10 +455,6 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     shellany (0.0.1)
-    shiba (0.5.0)
-      activesupport
-      mysql2
-      pg
     simple_oauth (0.3.1)
     simplecov (0.15.1)
       docile (~> 1.1.0)
@@ -602,7 +608,7 @@ DEPENDENCIES
   rubyntlm!
   sassc-rails
   selenium-webdriver
-  shiba
+  shiba!
   simplecov
   simplecov-rcov
   slack-notifier
