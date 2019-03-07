@@ -180,7 +180,7 @@ group :development, :test do
   gem 'vcr'
 end
 
-gem 'shiba', group: 'test', git: 'https://github.com/burrito-brothers/shiba.git', ref: '24d39ce'
+gem 'shiba', group: 'test', git: 'https://github.com/burrito-brothers/shiba.git', ref: '4202b84'
 # Want to extend Zammad with additional gems?
 # ZAMMAD USERS: Specify them in Gemfile.local
 #               (That way, you can customize the Gemfile
