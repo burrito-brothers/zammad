@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/burrito-brothers/shiba.git
-  revision: a31ca8d9f66ceac33ec7d70bce6734efeb9a2e61
-  ref: master
+  revision: 24d39ce04413a6de4211a84f831f2d86d7f98e5b
+  ref: 24d39ce
   specs:
     shiba (0.5.0)
       activesupport
