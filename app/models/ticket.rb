@@ -1198,6 +1198,11 @@ result
     Ticket::Article.where(ticket_id: id).order(:created_at, :id)
   end
 
+  def self.by_state
+    pending_states = Ticket::State.by_category(:pending).map(&:id)
+    Ticket.where(state_id: pending_states).to_a
+  end
+
   private
 
   def check_generate

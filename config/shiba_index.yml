@@ -1,0 +1,2444 @@
+---
+activity_streams:
+  count: 6
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_activity_streams_on_activity_stream_object_id:
+      name: index_activity_streams_on_activity_stream_object_id
+      columns:
+      - column: activity_stream_object_id
+        rows_per: 2
+    index_activity_streams_on_activity_stream_type_id:
+      name: index_activity_streams_on_activity_stream_type_id
+      columns:
+      - column: activity_stream_type_id
+        rows_per: 3
+    index_activity_streams_on_created_at:
+      name: index_activity_streams_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_activity_streams_on_created_by_id:
+      name: index_activity_streams_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 6
+    index_activity_streams_on_group_id:
+      name: index_activity_streams_on_group_id
+      columns:
+      - column: group_id
+        rows_per: 3
+    index_activity_streams_on_o_id:
+      name: index_activity_streams_on_o_id
+      columns:
+      - column: o_id
+        rows_per: 2
+    index_activity_streams_on_permission_id:
+      name: index_activity_streams_on_permission_id
+      columns:
+      - column: permission_id
+        rows_per: 3
+ar_internal_metadata:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: key
+        rows_per: 1
+      unique: true
+authorizations:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_authorizations_on_uid_and_provider:
+      name: index_authorizations_on_uid_and_provider
+      columns:
+      - column: uid
+        rows_per: 1
+      - column: provider
+        rows_per: 1
+    index_authorizations_on_user_id:
+      name: index_authorizations_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+    index_authorizations_on_username:
+      name: index_authorizations_on_username
+      columns:
+      - column: username
+        rows_per: 1
+avatars:
+  count: 4
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_36592d9368:
+      name: fk_rails_36592d9368
+      columns:
+      - column: updated_by_id
+        rows_per: 2
+    fk_rails_7f23a117cf:
+      name: fk_rails_7f23a117cf
+      columns:
+      - column: created_by_id
+        rows_per: 2
+    index_avatars_on_default:
+      name: index_avatars_on_default
+      columns:
+      - column: default
+        rows_per: 2
+    index_avatars_on_o_id_and_object_lookup_id:
+      name: index_avatars_on_o_id_and_object_lookup_id
+      columns:
+      - column: o_id
+        rows_per: 1
+      - column: object_lookup_id
+        rows_per: 1
+    index_avatars_on_source:
+      name: index_avatars_on_source
+      columns:
+      - column: source
+        rows_per: 2
+    index_avatars_on_store_hash:
+      name: index_avatars_on_store_hash
+      columns:
+      - column: store_hash
+        rows_per: 2
+calendars:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_1923375e08:
+      name: fk_rails_1923375e08
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_2a2c81de1a:
+      name: fk_rails_2a2c81de1a
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_calendars_on_name:
+      name: index_calendars_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+channels:
+  count: 2
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_32268ed43d:
+      name: fk_rails_32268ed43d
+      columns:
+      - column: updated_by_id
+        rows_per: 2
+    fk_rails_8011c05949:
+      name: fk_rails_8011c05949
+      columns:
+      - column: group_id
+        rows_per: 1
+    fk_rails_f1fc2a34ff:
+      name: fk_rails_f1fc2a34ff
+      columns:
+      - column: created_by_id
+        rows_per: 2
+    index_channels_on_area:
+      name: index_channels_on_area
+      columns:
+      - column: area
+        rows_per: 2
+chat_agents:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_chat_agents_on_active:
+      name: index_chat_agents_on_active
+      columns:
+      - column: active
+        rows_per: 1
+    index_chat_agents_on_created_by_id:
+      name: index_chat_agents_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 1
+      unique: true
+    index_chat_agents_on_updated_by_id:
+      name: index_chat_agents_on_updated_by_id
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+      unique: true
+chat_messages:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_af8ea0a844:
+      name: fk_rails_af8ea0a844
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_chat_messages_on_chat_session_id:
+      name: index_chat_messages_on_chat_session_id
+      columns:
+      - column: chat_session_id
+        rows_per: 1
+chat_sessions:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_9b5b542892:
+      name: fk_rails_9b5b542892
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_dab338cf4e:
+      name: fk_rails_dab338cf4e
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_chat_sessions_on_chat_id:
+      name: index_chat_sessions_on_chat_id
+      columns:
+      - column: chat_id
+        rows_per: 1
+    index_chat_sessions_on_session_id:
+      name: index_chat_sessions_on_session_id
+      columns:
+      - column: session_id
+        rows_per: 1
+    index_chat_sessions_on_state:
+      name: index_chat_sessions_on_state
+      columns:
+      - column: state
+        rows_per: 1
+    index_chat_sessions_on_user_id:
+      name: index_chat_sessions_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+chat_topics:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_05113b359f:
+      name: fk_rails_05113b359f
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_aae140f2f9:
+      name: fk_rails_aae140f2f9
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_chat_topics_on_name:
+      name: index_chat_topics_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+chats:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_9053a479a7:
+      name: fk_rails_9053a479a7
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_cb3fe7fa69:
+      name: fk_rails_cb3fe7fa69
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_chats_on_name:
+      name: index_chats_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+cti_caller_ids:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_f03ef195fa:
+      name: fk_rails_f03ef195fa
+      columns:
+      - column: user_id
+        rows_per: 1
+    index_cti_caller_ids_on_caller_id:
+      name: index_cti_caller_ids_on_caller_id
+      columns:
+      - column: caller_id
+        rows_per: 1
+    index_cti_caller_ids_on_caller_id_and_level:
+      name: index_cti_caller_ids_on_caller_id_and_level
+      columns:
+      - column: caller_id
+        rows_per: 1
+      - column: level
+        rows_per: 1
+    index_cti_caller_ids_on_caller_id_and_user_id:
+      name: index_cti_caller_ids_on_caller_id_and_user_id
+      columns:
+      - column: caller_id
+        rows_per: 1
+      - column: user_id
+        rows_per: 1
+    index_cti_caller_ids_on_object_and_o_id:
+      name: index_cti_caller_ids_on_object_and_o_id
+      columns:
+      - column: object
+        rows_per: 1
+      - column: o_id
+        rows_per: 1
+cti_logs:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_cti_logs_on_call_id:
+      name: index_cti_logs_on_call_id
+      columns:
+      - column: call_id
+        rows_per: 1
+      unique: true
+    index_cti_logs_on_direction:
+      name: index_cti_logs_on_direction
+      columns:
+      - column: direction
+        rows_per: 1
+    index_cti_logs_on_from:
+      name: index_cti_logs_on_from
+      columns:
+      - column: from
+        rows_per: 1
+delayed_jobs:
+  count: 19
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    delayed_jobs_priority:
+      name: delayed_jobs_priority
+      columns:
+      - column: priority
+        rows_per: 100%
+      - column: run_at
+        rows_per: 1
+email_addresses:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_4f204b5369:
+      name: fk_rails_4f204b5369
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_a24ae390cf:
+      name: fk_rails_a24ae390cf
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_email_addresses_on_email:
+      name: index_email_addresses_on_email
+      columns:
+      - column: email
+        rows_per: 1
+      unique: true
+external_credentials:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+external_syncs:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_external_syncs_on_object_and_o_id:
+      name: index_external_syncs_on_object_and_o_id
+      columns:
+      - column: object
+        rows_per: 1
+      - column: o_id
+        rows_per: 1
+    index_external_syncs_on_source_and_source_id:
+      name: index_external_syncs_on_source_and_source_id
+      columns:
+      - column: source
+        rows_per: 1
+      - column: source_id
+        rows_per: 1
+      unique: true
+    index_external_syncs_on_source_and_source_id_and_object_o_id:
+      name: index_external_syncs_on_source_and_source_id_and_object_o_id
+      columns:
+      - column: source
+        rows_per: 1
+      - column: source_id
+        rows_per: 1
+      - column: object
+        rows_per: 1
+      - column: o_id
+        rows_per: 1
+groups:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_5538295cdc:
+      name: fk_rails_5538295cdc
+      columns:
+      - column: signature_id
+        rows_per: 1
+    fk_rails_55ff2495b5:
+      name: fk_rails_55ff2495b5
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_7bec5aff4f:
+      name: fk_rails_7bec5aff4f
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_a828c3963d:
+      name: fk_rails_a828c3963d
+      columns:
+      - column: email_address_id
+        rows_per: 1
+    index_groups_on_name:
+      name: index_groups_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+groups_users:
+  count:
+  indexes:
+    index_groups_users_on_access:
+      name: index_groups_users_on_access
+      columns:
+      - column: access
+        rows_per: 1
+    index_groups_users_on_group_id:
+      name: index_groups_users_on_group_id
+      columns:
+      - column: group_id
+        rows_per: 1
+    index_groups_users_on_user_id:
+      name: index_groups_users_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+histories:
+  count: 10000000
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_histories_on_created_at:
+      name: index_histories_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_histories_on_created_by_id:
+      name: index_histories_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 100
+    index_histories_on_history_attribute_id:
+      name: index_histories_on_history_attribute_id
+      columns:
+      - column: history_attribute_id
+        rows_per: 31%
+    index_histories_on_history_object_id:
+      name: index_histories_on_history_object_id
+      columns:
+      - column: history_object_id
+        rows_per: 20
+    index_histories_on_history_type_id:
+      name: index_histories_on_history_type_id
+      columns:
+      - column: history_type_id
+        rows_per: 33%
+    index_histories_on_id_from:
+      name: index_histories_on_id_from
+      columns:
+      - column: id_from
+        rows_per: 50%
+    index_histories_on_id_to:
+      name: index_histories_on_id_to
+      columns:
+      - column: id_to
+        rows_per: 50%
+    index_histories_on_o_id:
+      name: index_histories_on_o_id
+      columns:
+      - column: o_id
+        rows_per: 4
+    index_histories_on_o_id_and_history_object_id_and_related_o_id:
+      name: index_histories_on_o_id_and_history_object_id_and_related_o_id
+      columns:
+      - column: o_id
+        rows_per: 3
+      - column: history_object_id
+        rows_per: 1
+      - column: related_o_id
+        rows_per: 1
+    index_histories_on_related_history_object_id:
+      name: index_histories_on_related_history_object_id
+      columns:
+      - column: related_history_object_id
+        rows_per: 3
+    index_histories_on_related_o_id:
+      name: index_histories_on_related_o_id
+      columns:
+      - column: related_o_id
+        rows_per: 3
+    index_histories_on_value_from:
+      name: index_histories_on_value_from
+      columns:
+      - column: value_from
+        rows_per: 10%
+    index_histories_on_value_to:
+      name: index_histories_on_value_to
+      columns:
+      - column: value_to
+        rows_per: 5%
+history_attributes:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_history_attributes_on_name:
+      name: index_history_attributes_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+history_objects:
+  count: 5
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_history_objects_on_name:
+      name: index_history_objects_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+history_types:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_history_types_on_name:
+      name: index_history_types_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+http_logs:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_0a97b58d1a:
+      name: fk_rails_0a97b58d1a
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_http_logs_on_created_at:
+      name: index_http_logs_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_http_logs_on_created_by_id:
+      name: index_http_logs_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_http_logs_on_facility:
+      name: index_http_logs_on_facility
+      columns:
+      - column: facility
+        rows_per: 1
+import_jobs:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+jobs:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_3e355905b6:
+      name: fk_rails_3e355905b6
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_c4f56411f8:
+      name: fk_rails_c4f56411f8
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_jobs_on_name:
+      name: index_jobs_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+karma_activities:
+  count: 11
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_karma_activities_on_name:
+      name: index_karma_activities_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+karma_activity_logs:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_0517d121f2:
+      name: fk_rails_0517d121f2
+      columns:
+      - column: activity_id
+        rows_per: 1
+    index_karma_activity_logs_on_created_at:
+      name: index_karma_activity_logs_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_karma_activity_logs_on_o_id_and_object_lookup_id:
+      name: index_karma_activity_logs_on_o_id_and_object_lookup_id
+      columns:
+      - column: o_id
+        rows_per: 1
+      - column: object_lookup_id
+        rows_per: 1
+    index_karma_activity_logs_on_user_id:
+      name: index_karma_activity_logs_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+karma_users:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_karma_users_on_user_id:
+      name: index_karma_users_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+      unique: true
+link_objects:
+  count: 5
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_link_objects_on_name:
+      name: index_link_objects_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+link_types:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_link_types_on_name:
+      name: index_link_types_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+links:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_a578a39c28:
+      name: fk_rails_a578a39c28
+      columns:
+      - column: link_type_id
+        rows_per: 1
+    links_uniq_total:
+      name: links_uniq_total
+      columns:
+      - column: link_object_source_id
+        rows_per: 1
+      - column: link_object_source_value
+        rows_per: 1
+      - column: link_object_target_id
+        rows_per: 1
+      - column: link_object_target_value
+        rows_per: 1
+      - column: link_type_id
+        rows_per: 1
+      unique: true
+locales:
+  count: 38
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_locales_on_locale:
+      name: index_locales_on_locale
+      columns:
+      - column: locale
+        rows_per: 1
+      unique: true
+    index_locales_on_name:
+      name: index_locales_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+macros:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_18961fdc52:
+      name: fk_rails_18961fdc52
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_84f97aa218:
+      name: fk_rails_84f97aa218
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_macros_on_name:
+      name: index_macros_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+notifications:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+oauth_access_grants:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_b4b53e07b8:
+      name: fk_rails_b4b53e07b8
+      columns:
+      - column: application_id
+        rows_per: 1
+    index_oauth_access_grants_on_token:
+      name: index_oauth_access_grants_on_token
+      columns:
+      - column: token
+        rows_per: 1
+      unique: true
+oauth_access_tokens:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_732cb83ab7:
+      name: fk_rails_732cb83ab7
+      columns:
+      - column: application_id
+        rows_per: 1
+    index_oauth_access_tokens_on_refresh_token:
+      name: index_oauth_access_tokens_on_refresh_token
+      columns:
+      - column: refresh_token
+        rows_per: 1
+      unique: true
+    index_oauth_access_tokens_on_resource_owner_id:
+      name: index_oauth_access_tokens_on_resource_owner_id
+      columns:
+      - column: resource_owner_id
+        rows_per: 1
+    index_oauth_access_tokens_on_token:
+      name: index_oauth_access_tokens_on_token
+      columns:
+      - column: token
+        rows_per: 1
+      unique: true
+oauth_applications:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_oauth_applications_on_uid:
+      name: index_oauth_applications_on_uid
+      columns:
+      - column: uid
+        rows_per: 1
+      unique: true
+object_lookups:
+  count: 7
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_object_lookups_on_name:
+      name: index_object_lookups_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+object_manager_attributes:
+  count: 48
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_acacd17a49:
+      name: fk_rails_acacd17a49
+      columns:
+      - column: created_by_id
+        rows_per: 100%
+    fk_rails_e812039563:
+      name: fk_rails_e812039563
+      columns:
+      - column: updated_by_id
+        rows_per: 100%
+    index_object_manager_attributes_on_object_lookup_id:
+      name: index_object_manager_attributes_on_object_lookup_id
+      columns:
+      - column: object_lookup_id
+        rows_per: 19%
+    index_object_manager_attributes_on_object_lookup_id_and_name:
+      name: index_object_manager_attributes_on_object_lookup_id_and_name
+      columns:
+      - column: object_lookup_id
+        rows_per: 19%
+      - column: name
+        rows_per: 1
+      unique: true
+online_notifications:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_0c0055c5df:
+      name: fk_rails_0c0055c5df
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_ee155e3c0c:
+      name: fk_rails_ee155e3c0c
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_online_notifications_on_created_at:
+      name: index_online_notifications_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_online_notifications_on_seen:
+      name: index_online_notifications_on_seen
+      columns:
+      - column: seen
+        rows_per: 1
+    index_online_notifications_on_updated_at:
+      name: index_online_notifications_on_updated_at
+      columns:
+      - column: updated_at
+        rows_per: 1
+    index_online_notifications_on_user_id:
+      name: index_online_notifications_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+organizations:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_6b945c40b8:
+      name: fk_rails_6b945c40b8
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_edec76c076:
+      name: fk_rails_edec76c076
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_organizations_on_domain:
+      name: index_organizations_on_domain
+      columns:
+      - column: domain
+        rows_per: 1
+    index_organizations_on_name:
+      name: index_organizations_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+organizations_users:
+  count:
+  indexes:
+    index_organizations_users_on_organization_id:
+      name: index_organizations_users_on_organization_id
+      columns:
+      - column: organization_id
+        rows_per: 1
+    index_organizations_users_on_user_id:
+      name: index_organizations_users_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+overviews:
+  count: 9
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_13fe2fde45:
+      name: fk_rails_13fe2fde45
+      columns:
+      - column: updated_by_id
+        rows_per: 9
+    fk_rails_a12668341b:
+      name: fk_rails_a12668341b
+      columns:
+      - column: created_by_id
+        rows_per: 9
+    index_overviews_on_name:
+      name: index_overviews_on_name
+      columns:
+      - column: name
+        rows_per: 1
+overviews_groups:
+  count:
+  indexes:
+    index_overviews_groups_on_group_id:
+      name: index_overviews_groups_on_group_id
+      columns:
+      - column: group_id
+        rows_per: 1
+    index_overviews_groups_on_overview_id:
+      name: index_overviews_groups_on_overview_id
+      columns:
+      - column: overview_id
+        rows_per: 1
+overviews_roles:
+  count:
+  indexes:
+    index_overviews_roles_on_overview_id:
+      name: index_overviews_roles_on_overview_id
+      columns:
+      - column: overview_id
+        rows_per: 1
+    index_overviews_roles_on_role_id:
+      name: index_overviews_roles_on_role_id
+      columns:
+      - column: role_id
+        rows_per: 4
+overviews_users:
+  count:
+  indexes:
+    index_overviews_users_on_overview_id:
+      name: index_overviews_users_on_overview_id
+      columns:
+      - column: overview_id
+        rows_per: 1
+    index_overviews_users_on_user_id:
+      name: index_overviews_users_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+package_migrations:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+packages:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_438d68f470:
+      name: fk_rails_438d68f470
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_86b7b71dbf:
+      name: fk_rails_86b7b71dbf
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+permissions:
+  count: 52
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_permissions_on_name:
+      name: index_permissions_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+permissions_roles:
+  count:
+  indexes:
+    index_permissions_roles_on_permission_id:
+      name: index_permissions_roles_on_permission_id
+      columns:
+      - column: permission_id
+        rows_per: 1
+    index_permissions_roles_on_role_id:
+      name: index_permissions_roles_on_role_id
+      columns:
+      - column: role_id
+        rows_per: 27%
+postmaster_filters:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_4b17873e0f:
+      name: fk_rails_4b17873e0f
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_99ae723fc6:
+      name: fk_rails_99ae723fc6
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_postmaster_filters_on_channel:
+      name: index_postmaster_filters_on_channel
+      columns:
+      - column: channel
+        rows_per: 1
+recent_views:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_recent_views_on_created_at:
+      name: index_recent_views_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_recent_views_on_created_by_id:
+      name: index_recent_views_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 3
+    index_recent_views_on_o_id:
+      name: index_recent_views_on_o_id
+      columns:
+      - column: o_id
+        rows_per: 1
+    index_recent_views_on_recent_view_object_id:
+      name: index_recent_views_on_recent_view_object_id
+      columns:
+      - column: recent_view_object_id
+        rows_per: 3
+report_profiles:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_214a4c247b:
+      name: fk_rails_214a4c247b
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_c0dbdacc53:
+      name: fk_rails_c0dbdacc53
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_report_profiles_on_name:
+      name: index_report_profiles_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+roles:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_b41292c88f:
+      name: fk_rails_b41292c88f
+      columns:
+      - column: created_by_id
+        rows_per: 3
+    fk_rails_e85422db7e:
+      name: fk_rails_e85422db7e
+      columns:
+      - column: updated_by_id
+        rows_per: 3
+    index_roles_on_name:
+      name: index_roles_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+roles_groups:
+  count:
+  indexes:
+    index_roles_groups_on_access:
+      name: index_roles_groups_on_access
+      columns:
+      - column: access
+        rows_per: 1
+    index_roles_groups_on_group_id:
+      name: index_roles_groups_on_group_id
+      columns:
+      - column: group_id
+        rows_per: 1
+    index_roles_groups_on_role_id:
+      name: index_roles_groups_on_role_id
+      columns:
+      - column: role_id
+        rows_per: 1
+roles_users:
+  count:
+  indexes:
+    index_roles_users_on_role_id:
+      name: index_roles_users_on_role_id
+      columns:
+      - column: role_id
+        rows_per: 1
+    index_roles_users_on_user_id:
+      name: index_roles_users_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+schedulers:
+  count: 21
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_08966259e8:
+      name: fk_rails_08966259e8
+      columns:
+      - column: updated_by_id
+        rows_per: 100%
+    fk_rails_e0c99c2069:
+      name: fk_rails_e0c99c2069
+      columns:
+      - column: created_by_id
+        rows_per: 100%
+    index_schedulers_on_name:
+      name: index_schedulers_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+schema_migrations:
+  count: 118
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: version
+        rows_per: 1
+      unique: true
+sessions:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_sessions_on_persistent:
+      name: index_sessions_on_persistent
+      columns:
+      - column: persistent
+        rows_per: 1
+    index_sessions_on_session_id:
+      name: index_sessions_on_session_id
+      columns:
+      - column: session_id
+        rows_per: 1
+    index_sessions_on_updated_at:
+      name: index_sessions_on_updated_at
+      columns:
+      - column: updated_at
+        rows_per: 1
+settings:
+  count: 201
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_settings_on_area:
+      name: index_settings_on_area
+      columns:
+      - column: area
+        rows_per: 2
+    index_settings_on_frontend:
+      name: index_settings_on_frontend
+      columns:
+      - column: frontend
+        rows_per: 50%
+    index_settings_on_name:
+      name: index_settings_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+signatures:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_82877eeea3:
+      name: fk_rails_82877eeea3
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_997a237d5e:
+      name: fk_rails_997a237d5e
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_signatures_on_name:
+      name: index_signatures_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+slas:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_15319a5af4:
+      name: fk_rails_15319a5af4
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_5a768af5b2:
+      name: fk_rails_5a768af5b2
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_slas_on_name:
+      name: index_slas_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+stats_stores:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_stats_stores_on_created_at:
+      name: index_stats_stores_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_stats_stores_on_created_by_id:
+      name: index_stats_stores_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_stats_stores_on_key:
+      name: index_stats_stores_on_key
+      columns:
+      - column: key
+        rows_per: 1
+    index_stats_stores_on_o_id:
+      name: index_stats_stores_on_o_id
+      columns:
+      - column: o_id
+        rows_per: 1
+    index_stats_stores_on_stats_store_object_id:
+      name: index_stats_stores_on_stats_store_object_id
+      columns:
+      - column: stats_store_object_id
+        rows_per: 1
+store_files:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_store_files_on_provider:
+      name: index_store_files_on_provider
+      columns:
+      - column: provider
+        rows_per: 1
+    index_store_files_on_sha:
+      name: index_store_files_on_sha
+      columns:
+      - column: sha
+        rows_per: 1
+      unique: true
+store_objects:
+  count: 2
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_store_objects_on_name:
+      name: index_store_objects_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+store_provider_dbs:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_store_provider_dbs_on_sha:
+      name: index_store_provider_dbs_on_sha
+      columns:
+      - column: sha
+        rows_per: 1
+      unique: true
+stores:
+  count: 2
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_17354e2aa6:
+      name: fk_rails_17354e2aa6
+      columns:
+      - column: created_by_id
+        rows_per: 2
+    fk_rails_60bb0cecf9:
+      name: fk_rails_60bb0cecf9
+      columns:
+      - column: store_file_id
+        rows_per: 2
+    index_stores_on_store_object_id_and_o_id:
+      name: index_stores_on_store_object_id_and_o_id
+      columns:
+      - column: store_object_id
+        rows_per: 1
+      - column: o_id
+        rows_per: 1
+tag_items:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_tag_items_on_name_downcase:
+      name: index_tag_items_on_name_downcase
+      columns:
+      - column: name_downcase
+        rows_per: 1
+tag_objects:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_tag_objects_on_name:
+      name: index_tag_objects_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+tags:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_5f245fd6a7:
+      name: fk_rails_5f245fd6a7
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    fk_rails_ebb54809f6:
+      name: fk_rails_ebb54809f6
+      columns:
+      - column: tag_item_id
+        rows_per: 1
+    index_tags_on_o_id:
+      name: index_tags_on_o_id
+      columns:
+      - column: o_id
+        rows_per: 1
+    index_tags_on_tag_object_id:
+      name: index_tags_on_tag_object_id
+      columns:
+      - column: tag_object_id
+        rows_per: 1
+taskbars:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_taskbars_on_client_id:
+      name: index_taskbars_on_client_id
+      columns:
+      - column: client_id
+        rows_per: 3
+    index_taskbars_on_key:
+      name: index_taskbars_on_key
+      columns:
+      - column: key
+        rows_per: 1
+    index_taskbars_on_user_id:
+      name: index_taskbars_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 3
+templates:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_4688f6dd32:
+      name: fk_rails_4688f6dd32
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_989d730f4b:
+      name: fk_rails_989d730f4b
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_templates_on_name:
+      name: index_templates_on_name
+      columns:
+      - column: name
+        rows_per: 1
+    index_templates_on_user_id:
+      name: index_templates_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+templates_groups:
+  count:
+  indexes:
+    index_templates_groups_on_group_id:
+      name: index_templates_groups_on_group_id
+      columns:
+      - column: group_id
+        rows_per: 1
+    index_templates_groups_on_template_id:
+      name: index_templates_groups_on_template_id
+      columns:
+      - column: template_id
+        rows_per: 1
+text_modules:
+  count: 27
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_343b2c0fce:
+      name: fk_rails_343b2c0fce
+      columns:
+      - column: updated_by_id
+        rows_per: 100%
+    fk_rails_84148bfddb:
+      name: fk_rails_84148bfddb
+      columns:
+      - column: created_by_id
+        rows_per: 100%
+    index_text_modules_on_name:
+      name: index_text_modules_on_name
+      columns:
+      - column: name
+        rows_per: 1
+    index_text_modules_on_user_id:
+      name: index_text_modules_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 100%
+text_modules_groups:
+  count:
+  indexes:
+    index_text_modules_groups_on_group_id:
+      name: index_text_modules_groups_on_group_id
+      columns:
+      - column: group_id
+        rows_per: 1
+    index_text_modules_groups_on_text_module_id:
+      name: index_text_modules_groups_on_text_module_id
+      columns:
+      - column: text_module_id
+        rows_per: 1
+ticket_article_flags:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_ticket_article_flags_on_articles_id_and_created_by_id:
+      name: index_ticket_article_flags_on_articles_id_and_created_by_id
+      columns:
+      - column: ticket_article_id
+        rows_per: 1
+      - column: created_by_id
+        rows_per: 1
+    index_ticket_article_flags_on_created_by_id:
+      name: index_ticket_article_flags_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_ticket_article_flags_on_ticket_article_id:
+      name: index_ticket_article_flags_on_ticket_article_id
+      columns:
+      - column: ticket_article_id
+        rows_per: 1
+    index_ticket_article_flags_on_ticket_article_id_and_key:
+      name: index_ticket_article_flags_on_ticket_article_id_and_key
+      columns:
+      - column: ticket_article_id
+        rows_per: 1
+      - column: key
+        rows_per: 1
+ticket_article_senders:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_0d21d01513:
+      name: fk_rails_0d21d01513
+      columns:
+      - column: created_by_id
+        rows_per: 3
+    fk_rails_f5ba9a2f30:
+      name: fk_rails_f5ba9a2f30
+      columns:
+      - column: updated_by_id
+        rows_per: 3
+    index_ticket_article_senders_on_name:
+      name: index_ticket_article_senders_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+ticket_article_types:
+  count: 12
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_01020bb700:
+      name: fk_rails_01020bb700
+      columns:
+      - column: updated_by_id
+        rows_per: 100%
+    fk_rails_521ad892f1:
+      name: fk_rails_521ad892f1
+      columns:
+      - column: created_by_id
+        rows_per: 100%
+    index_ticket_article_types_on_name:
+      name: index_ticket_article_types_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+ticket_articles:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_38b783461b:
+      name: fk_rails_38b783461b
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    fk_rails_c2dbb9e7aa:
+      name: fk_rails_c2dbb9e7aa
+      columns:
+      - column: origin_by_id
+        rows_per: 1
+    index_ticket_articles_message_id_md5_type_id:
+      name: index_ticket_articles_message_id_md5_type_id
+      columns:
+      - column: message_id_md5
+        rows_per: 3
+      - column: type_id
+        rows_per: 3
+    index_ticket_articles_on_created_at:
+      name: index_ticket_articles_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_ticket_articles_on_created_by_id:
+      name: index_ticket_articles_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_ticket_articles_on_internal:
+      name: index_ticket_articles_on_internal
+      columns:
+      - column: internal
+        rows_per: 3
+    index_ticket_articles_on_message_id_md5:
+      name: index_ticket_articles_on_message_id_md5
+      columns:
+      - column: message_id_md5
+        rows_per: 3
+    index_ticket_articles_on_sender_id:
+      name: index_ticket_articles_on_sender_id
+      columns:
+      - column: sender_id
+        rows_per: 3
+    index_ticket_articles_on_ticket_id:
+      name: index_ticket_articles_on_ticket_id
+      columns:
+      - column: ticket_id
+        rows_per: 1
+    index_ticket_articles_on_type_id:
+      name: index_ticket_articles_on_type_id
+      columns:
+      - column: type_id
+        rows_per: 3
+ticket_counters:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_ticket_counters_on_generator:
+      name: index_ticket_counters_on_generator
+      columns:
+      - column: generator
+        rows_per: 1
+      unique: true
+ticket_flags:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_ticket_flags_on_created_by_id:
+      name: index_ticket_flags_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_ticket_flags_on_ticket_id:
+      name: index_ticket_flags_on_ticket_id
+      columns:
+      - column: ticket_id
+        rows_per: 1
+    index_ticket_flags_on_ticket_id_and_created_by_id:
+      name: index_ticket_flags_on_ticket_id_and_created_by_id
+      columns:
+      - column: ticket_id
+        rows_per: 1
+      - column: created_by_id
+        rows_per: 1
+    index_ticket_flags_on_ticket_id_and_key:
+      name: index_ticket_flags_on_ticket_id_and_key
+      columns:
+      - column: ticket_id
+        rows_per: 1
+      - column: key
+        rows_per: 1
+ticket_priorities:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_7ba453ab6d:
+      name: fk_rails_7ba453ab6d
+      columns:
+      - column: created_by_id
+        rows_per: 3
+    fk_rails_d43af6872e:
+      name: fk_rails_d43af6872e
+      columns:
+      - column: updated_by_id
+        rows_per: 3
+    index_ticket_priorities_on_default_create:
+      name: index_ticket_priorities_on_default_create
+      columns:
+      - column: default_create
+        rows_per: 1
+    index_ticket_priorities_on_name:
+      name: index_ticket_priorities_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+ticket_state_types:
+  count: 7
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_0b22ef689c:
+      name: fk_rails_0b22ef689c
+      columns:
+      - column: updated_by_id
+        rows_per: 7
+    fk_rails_70faf2d7df:
+      name: fk_rails_70faf2d7df
+      columns:
+      - column: created_by_id
+        rows_per: 7
+    index_ticket_state_types_on_name:
+      name: index_ticket_state_types_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+ticket_states:
+  count: 7
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_0853e2d094:
+      name: fk_rails_0853e2d094
+      columns:
+      - column: state_type_id
+        rows_per: 1
+    fk_rails_2927b269ed:
+      name: fk_rails_2927b269ed
+      columns:
+      - column: created_by_id
+        rows_per: 7
+    fk_rails_4a7d116edc:
+      name: fk_rails_4a7d116edc
+      columns:
+      - column: updated_by_id
+        rows_per: 7
+    index_ticket_states_on_default_create:
+      name: index_ticket_states_on_default_create
+      columns:
+      - column: default_create
+        rows_per: 3
+    index_ticket_states_on_default_follow_up:
+      name: index_ticket_states_on_default_follow_up
+      columns:
+      - column: default_follow_up
+        rows_per: 3
+    index_ticket_states_on_name:
+      name: index_ticket_states_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+ticket_time_accountings:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_ticket_time_accountings_on_created_by_id:
+      name: index_ticket_time_accountings_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 1
+    index_ticket_time_accountings_on_ticket_article_id:
+      name: index_ticket_time_accountings_on_ticket_article_id
+      columns:
+      - column: ticket_article_id
+        rows_per: 1
+    index_ticket_time_accountings_on_ticket_id:
+      name: index_ticket_time_accountings_on_ticket_id
+      columns:
+      - column: ticket_id
+        rows_per: 1
+    index_ticket_time_accountings_on_time_unit:
+      name: index_ticket_time_accountings_on_time_unit
+      columns:
+      - column: time_unit
+        rows_per: 1
+tickets:
+  count: 1000000
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_b62b455ecb:
+      name: fk_rails_b62b455ecb
+      columns:
+      - column: organization_id
+        rows_per: 1
+    fk_rails_edf0f77848:
+      name: fk_rails_edf0f77848
+      columns:
+      - column: updated_by_id
+        rows_per: 1
+    index_tickets_on_close_at:
+      name: index_tickets_on_close_at
+      columns:
+      - column: close_at
+        rows_per: 1
+    index_tickets_on_close_diff_in_min:
+      name: index_tickets_on_close_diff_in_min
+      columns:
+      - column: close_diff_in_min
+        rows_per: 1
+    index_tickets_on_close_escalation_at:
+      name: index_tickets_on_close_escalation_at
+      columns:
+      - column: close_escalation_at
+        rows_per: 1
+    index_tickets_on_close_in_min:
+      name: index_tickets_on_close_in_min
+      columns:
+      - column: close_in_min
+        rows_per: 1
+    index_tickets_on_create_article_sender_id:
+      name: index_tickets_on_create_article_sender_id
+      columns:
+      - column: create_article_sender_id
+        rows_per: 2
+    index_tickets_on_create_article_type_id:
+      name: index_tickets_on_create_article_type_id
+      columns:
+      - column: create_article_type_id
+        rows_per: 5%
+    index_tickets_on_created_at:
+      name: index_tickets_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_tickets_on_created_by_id:
+      name: index_tickets_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 3
+    index_tickets_on_customer_id:
+      name: index_tickets_on_customer_id
+      columns:
+      - column: customer_id
+        rows_per: 1
+    index_tickets_on_escalation_at:
+      name: index_tickets_on_escalation_at
+      columns:
+      - column: escalation_at
+        rows_per: 1
+    index_tickets_on_first_response_at:
+      name: index_tickets_on_first_response_at
+      columns:
+      - column: first_response_at
+        rows_per: 1
+    index_tickets_on_first_response_diff_in_min:
+      name: index_tickets_on_first_response_diff_in_min
+      columns:
+      - column: first_response_diff_in_min
+        rows_per: 1
+    index_tickets_on_first_response_escalation_at:
+      name: index_tickets_on_first_response_escalation_at
+      columns:
+      - column: first_response_escalation_at
+        rows_per: 1
+    index_tickets_on_first_response_in_min:
+      name: index_tickets_on_first_response_in_min
+      columns:
+      - column: first_response_in_min
+        rows_per: 1
+    index_tickets_on_group_id:
+      name: index_tickets_on_group_id
+      columns:
+      - column: group_id
+        rows_per: 20%
+    index_tickets_on_group_id_and_state_id:
+      name: index_tickets_on_group_id_and_state_id
+      columns:
+      - column: group_id
+        rows_per: 20%
+      - column: state_id
+        rows_per: 5%
+    index_tickets_on_group_id_and_state_id_and_owner_id:
+      name: index_tickets_on_group_id_and_state_id_and_owner_id
+      columns:
+      - column: group_id
+        rows_per: 20%
+      - column: state_id
+        rows_per: 5%
+      - column: owner_id
+        rows_per: 1%
+    index_tickets_on_last_contact_agent_at:
+      name: index_tickets_on_last_contact_agent_at
+      columns:
+      - column: last_contact_agent_at
+        rows_per: 1
+    index_tickets_on_last_contact_at:
+      name: index_tickets_on_last_contact_at
+      columns:
+      - column: last_contact_at
+        rows_per: 1
+    index_tickets_on_last_contact_customer_at:
+      name: index_tickets_on_last_contact_customer_at
+      columns:
+      - column: last_contact_customer_at
+        rows_per: 1
+    index_tickets_on_last_owner_update_at:
+      name: index_tickets_on_last_owner_update_at
+      columns:
+      - column: last_owner_update_at
+        rows_per: 1
+    index_tickets_on_number:
+      name: index_tickets_on_number
+      columns:
+      - column: number
+        rows_per: 1
+      unique: true
+    index_tickets_on_owner_id:
+      name: index_tickets_on_owner_id
+      columns:
+      - column: owner_id
+        rows_per: 3
+    index_tickets_on_pending_time:
+      name: index_tickets_on_pending_time
+      columns:
+      - column: pending_time
+        rows_per: 1
+    index_tickets_on_priority_id:
+      name: index_tickets_on_priority_id
+      columns:
+      - column: priority_id
+        rows_per: 33%
+    index_tickets_on_state_id:
+      name: index_tickets_on_state_id
+      columns:
+      - column: state_id
+        rows_per: 20%
+    index_tickets_on_time_unit:
+      name: index_tickets_on_time_unit
+      columns:
+      - column: time_unit
+        rows_per: 3
+    index_tickets_on_title:
+      name: index_tickets_on_title
+      columns:
+      - column: title
+        rows_per: 1
+    index_tickets_on_type:
+      name: index_tickets_on_type
+      columns:
+      - column: type
+        rows_per: 50%
+    index_tickets_on_update_diff_in_min:
+      name: index_tickets_on_update_diff_in_min
+      columns:
+      - column: update_diff_in_min
+        rows_per: 1
+    index_tickets_on_update_in_min:
+      name: index_tickets_on_update_in_min
+      columns:
+      - column: update_in_min
+        rows_per: 1
+tokens:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_tokens_on_created_at:
+      name: index_tokens_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_tokens_on_name_and_action:
+      name: index_tokens_on_name_and_action
+      columns:
+      - column: name
+        rows_per: 1
+      - column: action
+        rows_per: 1
+      unique: true
+    index_tokens_on_persistent:
+      name: index_tokens_on_persistent
+      columns:
+      - column: persistent
+        rows_per: 1
+    index_tokens_on_user_id:
+      name: index_tokens_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+translations:
+  count: 52308
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_8cb1380a17:
+      name: fk_rails_8cb1380a17
+      columns:
+      - column: updated_by_id
+        rows_per: 100%
+    fk_rails_d6e6d9635d:
+      name: fk_rails_d6e6d9635d
+      columns:
+      - column: created_by_id
+        rows_per: 100%
+    index_translations_on_locale:
+      name: index_translations_on_locale
+      columns:
+      - column: locale
+        rows_per: 3%
+    index_translations_on_source:
+      name: index_translations_on_source
+      columns:
+      - column: source
+        rows_per: 34
+triggers:
+  count: 3
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_35c0846653:
+      name: fk_rails_35c0846653
+      columns:
+      - column: created_by_id
+        rows_per: 3
+    fk_rails_7f3d25350f:
+      name: fk_rails_7f3d25350f
+      columns:
+      - column: updated_by_id
+        rows_per: 3
+    index_triggers_on_name:
+      name: index_triggers_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+type_lookups:
+  count: 2
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_type_lookups_on_name:
+      name: index_type_lookups_on_name
+      columns:
+      - column: name
+        rows_per: 1
+      unique: true
+user_devices:
+  count: 0
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_user_devices_on_created_at:
+      name: index_user_devices_on_created_at
+      columns:
+      - column: created_at
+        rows_per: 1
+    index_user_devices_on_fingerprint:
+      name: index_user_devices_on_fingerprint
+      columns:
+      - column: fingerprint
+        rows_per: 1
+    index_user_devices_on_os_and_browser_and_location:
+      name: index_user_devices_on_os_and_browser_and_location
+      columns:
+      - column: os
+        rows_per: 1
+      - column: browser
+        rows_per: 1
+      - column: location
+        rows_per: 1
+    index_user_devices_on_updated_at:
+      name: index_user_devices_on_updated_at
+      columns:
+      - column: updated_at
+        rows_per: 1
+    index_user_devices_on_user_id:
+      name: index_user_devices_on_user_id
+      columns:
+      - column: user_id
+        rows_per: 1
+users:
+  count: 100000
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    fk_rails_355a7ffe95:
+      name: fk_rails_355a7ffe95
+      columns:
+      - column: updated_by_id
+        rows_per: 2
+    index_out_of_office:
+      name: index_out_of_office
+      columns:
+      - column: out_of_office
+        rows_per: 80%
+      - column: out_of_office_start_at
+        rows_per: 80%
+      - column: out_of_office_end_at
+        rows_per: 80%
+    index_users_on_created_by_id:
+      name: index_users_on_created_by_id
+      columns:
+      - column: created_by_id
+        rows_per: 50%
+    index_users_on_department:
+      name: index_users_on_department
+      columns:
+      - column: department
+        rows_per: 25%
+    index_users_on_email:
+      name: index_users_on_email
+      columns:
+      - column: email
+        rows_per: 1
+    index_users_on_fax:
+      name: index_users_on_fax
+      columns:
+      - column: fax
+        rows_per: 1
+    index_users_on_image:
+      name: index_users_on_image
+      columns:
+      - column: image
+        rows_per: 1
+    index_users_on_login:
+      name: index_users_on_login
+      columns:
+      - column: login
+        rows_per: 1
+      unique: true
+    index_users_on_mobile:
+      name: index_users_on_mobile
+      columns:
+      - column: mobile
+        rows_per: 1
+    index_users_on_organization_id:
+      name: index_users_on_organization_id
+      columns:
+      - column: organization_id
+        rows_per: 25%
+    index_users_on_out_of_office_replacement_id:
+      name: index_users_on_out_of_office_replacement_id
+      columns:
+      - column: out_of_office_replacement_id
+        rows_per: 1
+    index_users_on_phone:
+      name: index_users_on_phone
+      columns:
+      - column: phone
+        rows_per: 1
+    index_users_on_source:
+      name: index_users_on_source
+      columns:
+      - column: source
+        rows_per: 1
