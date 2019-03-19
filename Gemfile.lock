@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/burrito-brothers/shiba
+  revision: addff5a568380f6de8fe59f3a0093b109d7ca47c
+  ref: ben/better_pr_formatting
+  specs:
+    shiba (0.9.1)
+      activesupport
+
+GIT
   remote: https://github.com/sferik/twitter.git
   revision: 844818cad07ce490ccb9d8542ebb6b4fc7a61cb4
   specs:
@@ -445,10 +453,6 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     shellany (0.0.1)
-    shiba (0.6.0)
-      activesupport
-      mysql2
-      pg
     simple_oauth (0.3.1)
     simplecov (0.15.1)
       docile (~> 1.1.0)
@@ -602,7 +606,7 @@ DEPENDENCIES
   rubyntlm!
   sassc-rails
   selenium-webdriver
-  shiba (= 0.6.0)
+  shiba!
   simplecov
   simplecov-rcov
   slack-notifier

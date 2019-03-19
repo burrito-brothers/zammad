@@ -180,9 +180,9 @@ group :development, :test do
   gem 'vcr'
 end
 
-#gem 'shiba', group: 'test', git: 'https://github.com/burrito-brothers/shiba.git', ref: '4202b84'
-#gem 'shiba', group: 'test', path: "~/src/shiba"
-gem 'shiba', '0.6.0'
+#gem 'shiba', '0.6.2'
+#gem 'shiba', path: "~/src/shiba"
+gem 'shiba', git: 'https://github.com/burrito-brothers/shiba', ref: 'ben/better_pr_formatting'
 # Want to extend Zammad with additional gems?
 # ZAMMAD USERS: Specify them in Gemfile.local
 #               (That way, you can customize the Gemfile
